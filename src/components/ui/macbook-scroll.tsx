@@ -148,9 +148,9 @@ export const Lid = ({
           }}
           className="absolute inset-0 bg-[#010101] rounded-lg flex items-center justify-center"
         >
-          <span className="text-white">
+         {/*  <span className="text-white">
             <AceternityLogo />
-          </span>
+          </span> */}
         </div>
       </div>
       <motion.div
@@ -165,10 +165,9 @@ export const Lid = ({
         className="h-96 w-[32rem] absolute inset-0 bg-[#010101] rounded-2xl p-2"
       >
         <div className="absolute inset-0 bg-[#272729] rounded-lg" />
-        <Image
+        <iframe
           src={src as string}
-          alt="aceternity logo"
-          fill
+          // fill
           className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
         />
       </motion.div>
