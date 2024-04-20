@@ -1,15 +1,18 @@
 import React from "react";
-import { LayoutGrid } from "../../components/ui/layout-grid";
-import { cards } from "./projects";
-import { TextGenerateEffect } from "../../components/ui/text-generate-effect";
+import Image from "next/image";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 export default function About() {
   return (
-    <section className=" flex flex-col min-w-96 mt-40 items-center w-screen h-screen">
-      <TextGenerateEffect className=" w-full" words={"Hola mundo!! soy Rodrigo Gamero"} />
-      <article id="projects"className=" flex w-full h-full">
-      <LayoutGrid cards={cards} />
-      </article>
+    <section className=" flex">
+      <BackgroundGradientAnimation>
+        <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
+            
+          <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
+            Rodrigo Gamero
+          </p>
+        </div>
+      </BackgroundGradientAnimation>
     </section>
   );
 }
