@@ -1,4 +1,3 @@
-import React from "react";
 import { LayoutGrid } from "../../components/ui/layout-grid";
 import { cards } from "./projects";
 import { TextGenerateEffect } from "../../components/ui/text-generate-effect";
