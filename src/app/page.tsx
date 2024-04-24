@@ -15,7 +15,7 @@ export default function Home() {
           experiencias digitales memorables.
         </p>
       </div>
-      <MacbookScroll title="¿ Quién soy ?" src="http://localhost:3000/about" />
+      <MacbookScroll title="¿ Quién soy ?" src="/about" />
     </main>
   );
 }
