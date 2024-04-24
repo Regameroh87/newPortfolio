@@ -2,18 +2,17 @@
 import React from "react";
 import { Label } from "../../components/ui/label";
 import { Input } from "../../components/ui/input";
+import { Textarea } from "../../components/ui/textarea";
+import { SendEmail } from "@/components/lib/actions";
 import { cn } from "@/utils/cn";
 
 
-export default function SignupFormDemo() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form submitted");
-  };
+export default function FormPage() {
+
   return (
     <section className=" flex flex-col justify-center items-center h-auto min-h-screen w-full bg-black bg-grid-small-white/[0.2]">
         
-    <div className=" flex flex-col max-w-md border-2 border-gray-500 w-full rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black">
+    <div className=" flex flex-col w-full min-w-80 max-w-md border-2 border-gray-500 rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black mt-40">
       <h2 className="font-bold text-xl text-neutral-200">
        Bienvenido
       </h2>
@@ -21,24 +20,24 @@ export default function SignupFormDemo() {
         Ponte en contacto conmigo a traves del mail
       </p>
 
-      <form className="my-8" onSubmit={handleSubmit}>
+      <form className="my-8" action={SendEmail}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">Nombre</Label>
-            <Input id="firstname" placeholder="Juan" type="text" />
+            <Input id="firstname" name="firstname" placeholder="Juan" type="text" />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname">Apellido</Label>
-            <Input id="lastname" placeholder="Pérez" type="text" />
+            <Input id="lastname" name="lastname" placeholder="Pérez" type="text" />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Dirección de Email</Label>
-          <Input id="email" placeholder="example@mail.com" type="email" />
+          <Input id="email" name="email" placeholder="example@mail.com" type="email" />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="message">Mensaje</Label>
-          <Input id="message" placeholder="Escribe tu mensaje." type="textarea" />
+          <Textarea id="message" name="message" placeholder="Escribe tu mensaje." />
         </LabelInputContainer>
 
         <button
