@@ -6,55 +6,71 @@ import { Textarea } from "../../components/ui/textarea";
 import { SendEmail } from "@/components/lib/actions";
 import { cn } from "@/utils/cn";
 
-
 export default function FormPage() {
-
   return (
     <section className=" flex flex-col justify-center items-center h-auto min-h-screen w-full bg-black bg-grid-small-white/[0.2]">
-        
-    <div className=" flex flex-col w-full min-w-80 max-w-md border-2 border-gray-500 rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black mt-40">
-      <h2 className="font-bold text-xl text-neutral-200">
-       Bienvenido
-      </h2>
-      <p className="text-sm max-w-sm mt-2 text-neutral-300">
-        Ponte en contacto conmigo a traves del mail
-      </p>
+      <div className=" flex flex-col w-full min-w-80 max-w-md border-2 border-gray-500 rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black mt-40">
+        <h2 className="font-bold text-xl text-neutral-200">Contactamé!</h2>
+        <p className="text-sm max-w-sm mt-2 text-neutral-300">
+          Completa el formulario a continuación para que pueda armar un
+          presupuesto personalizado. Estoy aquí para ayudarte
+          con cualquier tipo de proyecto, ya sea grande o pequeño. ¡Espero
+          saber más sobre tus necesidades y trabajar juntos!
+        </p>
 
-      <form className="my-8" action={SendEmail}>
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-          <LabelInputContainer>
-            <Label htmlFor="firstname">Nombre</Label>
-            <Input id="firstname" name="firstname" placeholder="Juan" type="text" />
+        <form className="my-8" action={SendEmail}>
+          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
+            <LabelInputContainer>
+              <Label htmlFor="firstname">Nombre</Label>
+              <Input
+                id="firstname"
+                name="firstname"
+                placeholder="Juan"
+                type="text"
+              />
+            </LabelInputContainer>
+            <LabelInputContainer>
+              <Label htmlFor="lastname">Apellido</Label>
+              <Input
+                id="lastname"
+                name="lastname"
+                placeholder="Pérez"
+                type="text"
+              />
+            </LabelInputContainer>
+          </div>
+          <LabelInputContainer className="mb-4">
+            <Label htmlFor="email">Dirección de Email</Label>
+            <Input
+              id="email"
+              name="email"
+              placeholder="example@mail.com"
+              type="email"
+            />
           </LabelInputContainer>
-          <LabelInputContainer>
-            <Label htmlFor="lastname">Apellido</Label>
-            <Input id="lastname" name="lastname" placeholder="Pérez" type="text" />
+          <LabelInputContainer className="mb-4">
+            <Label htmlFor="message">Mensaje</Label>
+            <Textarea
+              id="message"
+              name="message"
+              placeholder="Escribe tu mensaje."
+            />
           </LabelInputContainer>
-        </div>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Dirección de Email</Label>
-          <Input id="email" name="email" placeholder="example@mail.com" type="email" />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="message">Mensaje</Label>
-          <Textarea id="message" name="message" placeholder="Escribe tu mensaje." />
-        </LabelInputContainer>
 
-        <button
-          className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit"
-        >
-          Enviar &rarr;
-          <BottomGradient />
-        </button>
+          <button
+            className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+            type="submit"
+          >
+            Enviar &rarr;
+            <BottomGradient />
+          </button>
 
-        <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
-      </form>
-    </div>
+          <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
+        </form>
+      </div>
     </section>
   );
 }
-
 
 const BottomGradient = () => {
   return (
@@ -78,4 +94,3 @@ const LabelInputContainer = ({
     </div>
   );
 };
-

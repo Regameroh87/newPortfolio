@@ -19,7 +19,7 @@ export default function About() {
           <div className=" max-w-64 overflow-hidden">
             <p className="bg-clip-text text-transparent text-sm drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
               ¡Hola! Soy Rodrigo Gamero, un desarrollador fullstack con sede en
-              Necochea, en la provincia de Buenos
+              Necochea, provincia de Buenos
               Aires, Argentina.
             </p>
           </div>
