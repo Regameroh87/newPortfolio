@@ -13,9 +13,8 @@ const transporter = nodemailer.createTransport({
 
 export const SendEmail = async (formData: FormData) => {
 
-  console.log(process.env.EMAIL, process.env.PASS)
   const propsMail = Object.fromEntries(formData.entries());
-  console.log(propsMail);
+//   console.log(propsMail);
   let mailOptions = {
     from: process.env.EMAIL,
     to: "gamero.rodrigo@gmail.com",
