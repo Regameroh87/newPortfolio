@@ -1,12 +1,34 @@
-'use server'
-import { redirect } from "next/navigation"
+"use server";
+require('dotenv').config();
+import { redirect } from "next/navigation";
+import nodemailer from "nodemailer";
 
-export const SendEmail = async (formData:FormData) => {
+const transporter = nodemailer.createTransport({
+    service: "Gmail",
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.PASS,
+    },
+  });
 
-    const propsMail = Object.fromEntries(formData.entries())
-    console.log(propsMail)
+export const SendEmail = async (formData: FormData) => {
 
-redirect('/')
+  console.log(process.env.EMAIL, process.env.PASS)
+  const propsMail = Object.fromEntries(formData.entries());
+  console.log(propsMail);
+  let mailOptions = {
+    from: process.env.EMAIL,
+    to: "gamero.rodrigo@gmail.com",
+    subject: "Consulta del portfolio",
+    text: ` El cliente ${propsMail.firstname} ${propsMail.lastname} email: ${propsMail.email} te envio la sig consulta: ${propsMail.message}`,
+  };
+  await transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+        console.error(error)
+    } else {
+        console.log("correoenviado", info.response)
+    }
+  })
 
-
-}
+  redirect("/");
+};
