@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/ui/navbar";
 import { usePathname } from "next/navigation";
+import SidebarDesktop from "@/components/ui/sidebarDesktop";
 
 const inter = Inter({ subsets: ["latin"] });
 // export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} flex flex-col`}>
        {pathname !== "/about" && <NavBar/>}
+       {pathname !== "/about" && <SidebarDesktop/>}
         {children}
         </body>
     </html>

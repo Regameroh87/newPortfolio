@@ -39,7 +39,7 @@ export default function NavBar() {
   }
 
   return (
-    <section className=" flex self-center fixed min-w-80 w-1/3 mt-10 bg-slate-500 bg-opacity-80 border-2 border-gray-400 shadow-black shadow-sm rounded-full justify-center z-20 md:w-1/2 md:h-14">
+    <section style={{zIndex:"999"}} className=" flex self-center fixed min-w-80 w-1/3 mt-10 bg-slate-500 bg-opacity-80 border-2 border-gray-400 shadow-black shadow-sm rounded-full justify-center z-20 md:w-1/2 md:h-14">
       <div className=" flex flex-col p-4 w-auto h-auto md:hidden">
         {!showMenu ? (
           <Bars
@@ -91,6 +91,7 @@ export default function NavBar() {
         <Link href={"/"}>
           <Home className="  w-4 h-4 text-white" />
         </Link>
+        
 
         {items.map((item) => (
           <span

@@ -28,16 +28,19 @@ export const TextGenerateEffect = ({
   const renderWords = () => {
     return (
       <motion.div ref={scope}>
-        {wordsArray.map((word, idx) => {
-          return (
-            <motion.span
-              key={word + idx}
-              className="dark:text-white text-black opacity-0"
-            >
-              {word}{" "}
-            </motion.span>
-          );
-        })}
+        {words.split('\n').map((line, lineIdx) => (
+          <div key={`line-${lineIdx}`}>
+            {line.split(' ').map((word, wordIdx) => (
+              <motion.span
+                key={`word-${lineIdx}-${wordIdx}`}
+                className="text-slate-300 text-sm md:text-xl opacity-0"
+              >
+                {word}{' '}
+              </motion.span>
+            ))}
+            <br />
+          </div>
+        ))}
       </motion.div>
     );
   };
@@ -45,7 +48,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className="dark:text-white text-black text-center p-4 text-2xl leading-snug tracking-wide">
+        <div className="text-white text-center p-4 text-2xl leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>

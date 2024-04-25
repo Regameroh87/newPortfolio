@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark, faChevronRight, faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import Image from "next/image";
 
 export function Bars({className, onClick} : { className: string; onClick?:any }) {
   return (
@@ -58,4 +59,13 @@ export function Xmark({className, onClick} : { className: string; onClick?: any}
         <FontAwesomeIcon className={" flex w-full h-full"}  icon={faInstagram} />
       </div>
     );
+  }
+
+
+  export function IconSvg ({nameIcon, width, height, className}:{nameIcon:string; width:number; height:number; className?:string;}) {
+    return (
+      <div className=" flex">
+        <Image className={`${className}`} src={`./socialIcons/${nameIcon}.svg`} alt={nameIcon} width={width} height={height}/>
+      </div>
+    )
   }
