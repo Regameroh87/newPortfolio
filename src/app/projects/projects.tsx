@@ -54,8 +54,12 @@ const SkeletonFour = () => {
       <p className="font-bold text-4xl text-white">Projecto Maratón</p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house by the river is a place of peace and tranquility. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+        Este innovador proyecto fue construido utilizando Next.js como framework
+        principal, lo cual permitió una experiencia web dinámica y rápida. Para
+        las principales funcionalidades: utilice MongoDB atlas para la base de
+        datos, Firebase para auth de terceros con google, Cloudinary para el
+        alojamiento de imagenes y documentos, y Mercado Pago para los pagos de
+        inscripciones y otra actividades.
       </p>
     </div>
   );

@@ -4,7 +4,7 @@ const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
-const { addDynamicIconSelectors } = require('@iconify/tailwind');
+
 
 const svgToDataUri = require("mini-svg-data-uri");
 
@@ -67,7 +67,6 @@ module.exports = {
     },
   },
   plugins: [
-    addDynamicIconSelectors(),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
