@@ -4,8 +4,8 @@ const SkeletonOne = () => {
       <p className="font-bold text-4xl text-white">Carrousel en CSS</p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        "Explorando la Creatividad con Simplicidad: Un Carrusel Sencillo,
-        Elaborado con Amor en CSS" En mi camino para fortalecer mis habilidades
+        Explorando la Creatividad con Simplicidad: Un Carrusel Sencillo,
+        en CSS puro. En mi camino para fortalecer mis habilidades
         y fomentar la imaginación, me embarqué en el diseño de un modesto
         carrusel de imágenes utilizando solo CSS. Aunque se presenta como un
         esfuerzo sencillo, este proyecto encapsula mi dedicación para
