@@ -6,7 +6,8 @@ import Image from "next/image";
 export default function SkillsPage() {
   return (
     
-    <div className="flex flex-col overflow-hidden">
+    <div className="flex flex-col overflow-hidden3">
+      <div className=" flex w-full h-1/ bg-white"></div>
       <ContainerScroll
         titleComponent={
           <>
@@ -20,7 +21,7 @@ export default function SkillsPage() {
         }
       >
         <Image
-          src={`/linear.webp`}
+          src={`/`}
           alt="hero"
           height={720}
           width={1400}

@@ -7,6 +7,7 @@ import { SendEmail } from "@/components/lib/actions";
 import { cn } from "@/utils/cn";
 
 export default function FormPage() {
+
   return (
     <section className=" flex flex-col justify-center items-center h-auto min-h-screen w-full bg-black bg-grid-small-white/[0.2]">
       <div className=" flex flex-col w-full min-w-80 max-w-md border-2 border-gray-500 rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black mt-40">
