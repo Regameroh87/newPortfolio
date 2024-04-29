@@ -3,8 +3,8 @@ import { BackgroundBeams } from "../components/ui/background-beams";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <BackgroundBeams className=" bg-slate-950" />
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-slate-900">
+      <BackgroundBeams />
       <div className=" flex flex-col pt-36">
         <h1 className="relative z-10 text-xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
           RODRIGO GAMERO

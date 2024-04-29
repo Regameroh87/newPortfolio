@@ -37,6 +37,6 @@ export const SendEmail = async (formData: FormData) => {
       console.log("correoenviado", info.response);
     }
   });
-  
   redirect("/");
+  
 };

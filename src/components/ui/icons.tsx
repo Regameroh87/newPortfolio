@@ -69,3 +69,12 @@ export function Xmark({className, onClick} : { className: string; onClick?: any}
       </div>
     )
   }
+
+  export function IconTechSvg ({nameIcon, width, height, className}:{nameIcon:string; width:number; height:number; className?:string;}) {
+    
+    return (
+      <div className=" flex">
+        <Image className={`${className}`} src={`./techIcons/${nameIcon}.svg`} alt={nameIcon} width={width} height={height}/>
+      </div>
+    )
+  }
