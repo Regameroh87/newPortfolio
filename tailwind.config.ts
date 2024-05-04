@@ -64,6 +64,7 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+    
     },
   },
   plugins: [
@@ -111,4 +112,8 @@ function addVariablesForColors({ addBase, theme }: any) {
 
 
 
+
+function polygon(arg0: number, arg1: number, arg2: number, arg3: number, arg4: number) {
+  throw new Error("Function not implemented.");
+}
 
