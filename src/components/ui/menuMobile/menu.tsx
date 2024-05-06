@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useDimensions } from "./use-dimensions";
 import { MenuToggle } from "./buttonToogle";
 import { Navigation } from "./navigation";
+import SocialIcons from "./socialIcons";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -34,14 +35,15 @@ export const MenuMobile = () => {
   return (
     <motion.nav
       style={{zIndex:"9999"}}
-      className=" fixed top-0 left-0 bottom-0 w-auto md:hidden"
+      className=" fixed top-0 left-0 bottom-0 right-0 w-auto md:hidden"
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
     >
       <motion.div className=" absolute top-0 left-0 bottom-0 bg-slate-500 w-screen min-w-[375]" variants={sidebar} />
-      <Navigation />
+      {isOpen && <SocialIcons/>}
+      <Navigation toggleOpen={toggleOpen} isOpen={isOpen} />
       <MenuToggle toggle={() => toggleOpen(!isOpen)} />
     </motion.nav>
   );

@@ -11,14 +11,31 @@ const variants = {
   }
 };
 
-export const Navigation = () => (
+export const Navigation = ({toggleOpen, isOpen}: {toggleOpen:any; isOpen:boolean}) => (
   <motion.ul
     className=" absolute top-[100px] w-[230px] p-[25px]"
    variants={variants}>
-    {itemIds.map(i => (
-      <MenuItem i={i} key={i} />
+    {itemIds.map((i, index )=> (
+      <MenuItem i={i} index={index} key={index} toggleOpen={toggleOpen} isOpen={isOpen} />
     ))}
   </motion.ul>
 );
 
-const itemIds = [0, 1, 2, 3, 4];
+const itemIds = [
+  {
+    name:"Home",
+    route:"/"
+  },
+  {
+    name: "Projectos",
+    route: "projects",
+  },
+  {
+    name: "Habilidades",
+    route: "/habilidades",
+  },
+  {
+    name: "Contacto",
+    route: "/contacto",
+  },
+];

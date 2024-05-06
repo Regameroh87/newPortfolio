@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
@@ -7,13 +8,14 @@ export default function About() {
       <BackgroundGradientAnimation>
         <div className="absolute z-50 inset-0 flex items-center justify-around text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
           {/* pantalla 512*384 */}
-          <div className=" flex w-auto h-auto">
+          <div className=" flex w-fit h-fit">
             <Image
-              className=" rounded-lg"
-              src="/Rodrigo.jpg"
+              className=" h-[250px] w-[300px] rounded-lg"
+              src="https://images.unsplash.com/photo-1514826786317-59744fe2a548?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Rodrigo Gamero"
-              width={200}
-              height={250}
+              width={422}
+              height={450}
+              style={{clipPath:" polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)"}}
             />
           </div>
           <div className=" max-w-64 overflow-hidden">

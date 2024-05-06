@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 import SidebarDesktop from "@/components/ui/sidebarDesktop";
 import { MenuMobile } from "@/components/ui/menuMobile/menu";
 
-
 const inter = Inter({ subsets: ["latin"] });
 // export const metadata: Metadata = {
 //   title: "Create Next App",
@@ -31,7 +30,7 @@ export default function RootLayout({
         {pathname !== "/about" && <NavBar />}
         {pathname !== "/about" && <MenuMobile />}
         {pathname !== "/about" && <SidebarDesktop />}
-            {children}
+        {children}
       </body>
     </html>
   );
